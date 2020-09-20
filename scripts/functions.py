@@ -17,6 +17,7 @@ class Transformations:
     def getROI(self, init, end):
         roi = self.img[init[0]: init[1], end[0]:end[1]];
         self.showImg('ROI Request', roi)
+    def getImageResize(self,):
 
     #? Simple method to show a image.
     def showImg(self, label, image):
