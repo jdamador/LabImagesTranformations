@@ -16,33 +16,37 @@ class Transformations:
         print("These are the values for [R, G, B] composition for the specific pixel checked: \nR = {}, G = {} and B = {}".format(R, G, B))
 
     #? 2) Extract a region of interest using coordinates given by the user.
-    def getROI(self, init, end):
-        roi = self.img[init[0]: init[1], end[0]:end[1]];
+    def getROI(self, initX, initY, endX, endY):
+        roi = self.img[initY: endY, initX: endX];
         self.showImg('ROI Request', roi)
 
     #? 3) Allow to adjust the size of an image requesting a new
     #  dimension in pixels and display the resulting image
-    def getImageResize(self, image, pixels):
-        resized = cv2.resize(image, (pixels, pixels))
+    def getImageResize(self, width, height):
+        resized = cv2.resize(self.img, (width, height))
         self.showImg('Fixed Resizing', resized)
 
     #? 4) Resize an image but without altering the appearance
     def getImageResizeWithoutAltheringAppearance(self, image):
         resized = imutils.resize(image, width=300)
-        self.showImg("Imutils Resize", resized)
+        self.showImg("Image Resized", resized)
 
     #? 5) Rotate an image the number of degrees required
-    def getImageRotation(self, image, degrees):
+    def getImageRotation(self, degrees):
+        image = imutils.resize(self.img, width=800)
         rotated = imutils.rotate(image, degrees)
-        self.showImg("Imutils Rotation", rotated)
+        self.showImg('Rotated image', rotated)
         
         
     #? 6) Smoothing an image using Gaussian Blur
     def getGaussianBlurImage(self):
         blurred = cv2.GaussianBlur(self.img, (11, 11), 0)
-        self.showImg('Smoothing Image', blurred)
+        image = imutils.resize(blurred, width=800)
+        self.showImg('Blurred image', image)
         
     #? Simple method to show a image.
     def showImg(self, label, image):
+        resized = imutils.resize(image, width=800)
+        cv2.imshow('Original', resized)
         cv2.imshow(label, image)
         cv2.waitKey(0)
