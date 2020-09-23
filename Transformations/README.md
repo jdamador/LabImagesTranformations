@@ -14,4 +14,4 @@ Ejecute el archivo llamado setup.py que se encuentra en la carpeta del proyecto 
 
 Nota: cerrar las ventanas desde la X para evitar la interrrupción de la ejecución del programa.
 ## Información de los métodos utilizados
-![alt text](https://github.com/jdamador/LabImagesTranformations/blob/master/img/infografia.png)
+![alt text](https://github.com/jdamador/PatternsCodeBank/blob/master/Transformations/img/infografia.png)
