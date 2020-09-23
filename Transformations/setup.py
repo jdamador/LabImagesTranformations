@@ -1,4 +1,4 @@
-__author__ = 'Daniel Amador'
+__author__ = 'Daniel Amador, Brandon Cruz'
 __version__ = '1.0'
 
 # * Import libraries
