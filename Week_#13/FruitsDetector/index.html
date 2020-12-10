@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Load the latest version of TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+    <div id="camera_container">
+      <video  style="border-color: black;" autoplay playsinline muted id="webcam" width="360" height="360"></video>
+    </div>
+    <div id= "buttons_container">
+      <button id="class-a">Añadir Fruta A</button>
+      <button id="class-b">Añadir Fruta B</button>
+      <button id="class-c">Añadir Fruta C</button>
+    </div>
+    <h4>
+      <div id="console">
+        First, add the examples of three fruits that you want to recognize.!!!
+      </div>
+    </h2>
+    <div id="instructions">
+      <h3>
+        Instruccions:
+      </h3>
+      1. Enable your cam before to start. You need to allow the browser to use your WebCam. <br>
+      2. Put the fruit or fruit picture in from of the camera and after that press the button to set the fruit.<br>
+      3. Each fruit need to be added three times. So, with the fruit in from of the camera press three times one button to add the fruit.<br>
+      4. After add a fruit just present a new picture and the system will show the result of the prediction below.<br>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
