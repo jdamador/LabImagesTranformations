@@ -1,0 +1,7 @@
+
+game_container { width: 300;
+  display: flex;
+}
+info_container {
+  display: flex;
+}
